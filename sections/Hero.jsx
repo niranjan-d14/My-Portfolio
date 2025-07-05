@@ -155,23 +155,26 @@ export default function Hero() {
         <source src="/background-music.mp3" type="audio/mpeg" />
       </audio>
 
-      {/* Navbar */}
-     <nav className="fixed top-4 md:top-6 w-full flex justify-center z-20 px-4 sm:px-6">
+      <nav className="fixed top-4 md:top-6 w-full z-20 px-4 sm:px-6">
   <div
-     className={`flex items-center justify-between w-full max-w-7xl backdrop-blur-md rounded-full px-4 sm:px-6 py-3
+    className={`flex flex-wrap items-center justify-between w-full max-w-7xl mx-auto 
+      px-4 sm:px-6 py-3 rounded-full backdrop-blur-md
       ${isDark
         ? "bg-gradient-to-r from-[#5ba8ff]/10 to-[#b48bf2]/10"
         : "bg-gradient-to-r from-[#b48bf2]/20 to-[#5ba8ff]/20"}
       border border-white/10 dark:border-white/20`}
   >
     {/* Avatar */}
-    <motion.div onClick={handleAvatarClick} className="relative cursor-pointer ml-[-8px]">
+    <motion.div
+      onClick={handleAvatarClick}
+      className="relative cursor-pointer mr-4 sm:mr-6"
+    >
       <motion.img
         whileHover={{ scale: 1.2, rotate: 15 }}
         transition={{ type: "spring", stiffness: 300 }}
         src="/avatar2.png"
         alt="avatar"
-        className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover shadow-md"
+        className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover shadow-md"
       />
       <AnimatePresence>{explode && <>{particles}</>}</AnimatePresence>
       <AnimatePresence>
@@ -191,7 +194,7 @@ export default function Hero() {
 
     {/* Nav Links */}
     <ul
-      className={`flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs sm:text-sm md:text-base font-mono ${
+      className={`flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs sm:text-sm md:text-base font-mono ${
         isDark ? "text-white" : "text-black"
       }`}
     >
@@ -206,6 +209,7 @@ export default function Hero() {
     </ul>
   </div>
 </nav>
+
 
       {/* Content & Spline */}
       <div className="flex flex-col lg:flex-row items-center justify-between pt-[90px] sm:pt-[80px] px-4 sm:px-6 md:px-20 gap-10">
