@@ -38,7 +38,7 @@ const TypingText = ({ isDark }) => {
 };
 
 export default function Hero() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [volume, setVolume] = useState(0.5);
