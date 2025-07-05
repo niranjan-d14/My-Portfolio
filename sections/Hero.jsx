@@ -155,17 +155,17 @@ export default function Hero() {
         <source src="/background-music.mp3" type="audio/mpeg" />
       </audio>
 
-{/* Navbar */}
-<nav className="fixed top-4 md:top-6 w-full z-20 px-4 sm:px-6 lg:px-8">
+      {/* Navbar */}
+<nav className="fixed top-4 md:top-6 w-full z-20 px-4 sm:px-6 md:px-20">
   <div
     className={`flex items-center justify-between w-full max-w-7xl mx-auto backdrop-blur-md rounded-full px-4 sm:px-6 py-3
-    ${isDark
-      ? "bg-gradient-to-r from-[#5ba8ff]/10 to-[#b48bf2]/10"
-      : "bg-gradient-to-r from-[#b48bf2]/20 to-[#5ba8ff]/20"}
-    border border-white/10 dark:border-white/20`}
+      ${isDark
+        ? "bg-gradient-to-r from-[#5ba8ff]/10 to-[#b48bf2]/10"
+        : "bg-gradient-to-r from-[#b48bf2]/20 to-[#5ba8ff]/20"}
+      border border-white/10 dark:border-white/20`}
   >
     {/* Avatar */}
-    <motion.div onClick={handleAvatarClick} className="relative cursor-pointer">
+    <motion.div onClick={handleAvatarClick} className="relative cursor-pointer ml-[-8px]">
       <motion.img
         whileHover={{ scale: 1.2, rotate: 15 }}
         transition={{ type: "spring", stiffness: 300 }}
@@ -206,7 +206,6 @@ export default function Hero() {
     </ul>
   </div>
 </nav>
-
 
       {/* Content & Spline */}
       <div className="flex flex-col lg:flex-row items-center justify-between pt-[90px] sm:pt-[80px] px-4 sm:px-6 md:px-20 gap-10">
