@@ -156,13 +156,13 @@ export default function Hero() {
       </audio>
 
 {/* Navbar */}
-<nav className="fixed top-4 md:top-6 w-full z-20 px-4 sm:px-6 flex justify-center">
+<nav className="fixed top-4 md:top-6 w-full z-20 px-4 sm:px-6 lg:px-8">
   <div
-    className={`w-full max-w-7xl flex items-center justify-between gap-4 px-4 sm:px-6 py-2 sm:py-3 rounded-full border backdrop-blur-md
-      ${isDark
-        ? "bg-gradient-to-r from-[#5ba8ff]/10 to-[#b48bf2]/10 border-white/10"
-        : "bg-gradient-to-r from-[#b48bf2]/20 to-[#5ba8ff]/20 border-white/20"}
-    `}
+    className={`flex items-center justify-between w-full max-w-7xl mx-auto backdrop-blur-md rounded-full px-4 sm:px-6 py-3
+    ${isDark
+      ? "bg-gradient-to-r from-[#5ba8ff]/10 to-[#b48bf2]/10"
+      : "bg-gradient-to-r from-[#b48bf2]/20 to-[#5ba8ff]/20"}
+    border border-white/10 dark:border-white/20`}
   >
     {/* Avatar */}
     <motion.div onClick={handleAvatarClick} className="relative cursor-pointer">
@@ -191,7 +191,7 @@ export default function Hero() {
 
     {/* Nav Links */}
     <ul
-      className={`flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-xs sm:text-sm md:text-base font-mono ${
+      className={`flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs sm:text-sm md:text-base font-mono ${
         isDark ? "text-white" : "text-black"
       }`}
     >
@@ -206,6 +206,7 @@ export default function Hero() {
     </ul>
   </div>
 </nav>
+
 
       {/* Content & Spline */}
       <div className="flex flex-col lg:flex-row items-center justify-between pt-[90px] sm:pt-[80px] px-4 sm:px-6 md:px-20 gap-10">
