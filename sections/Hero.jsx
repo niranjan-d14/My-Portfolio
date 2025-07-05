@@ -167,7 +167,7 @@ export default function Hero() {
     {/* Avatar */}
     <motion.div
       onClick={handleAvatarClick}
-      className="relative cursor-pointer mr-4 sm:mr-6"
+      className="relative cursor-pointer ml-[-2px] sm:ml-[-4px]"
     >
       <motion.img
         whileHover={{ scale: 1.2, rotate: 15 }}
