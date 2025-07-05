@@ -156,59 +156,57 @@ export default function Hero() {
       </audio>
 
       {/* Navbar */}
-<nav className="fixed top-4 md:top-6 w-full z-20 px-4 sm:px-6 md:px-20">
-  <div
-    className={`flex items-center justify-between w-full max-w-7xl mx-auto backdrop-blur-md rounded-full px-4 sm:px-6 py-3
-      ${isDark
-        ? "bg-gradient-to-r from-[#5ba8ff]/10 to-[#b48bf2]/10"
-        : "bg-gradient-to-r from-[#b48bf2]/20 to-[#5ba8ff]/20"}
-      border border-white/10 dark:border-white/20`}
-  >
-    {/* Avatar */}
-    <motion.div onClick={handleAvatarClick} className="relative cursor-pointer ml-[-8px]">
-      <motion.img
-        whileHover={{ scale: 1.2, rotate: 15 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        src="/avatar2.png"
-        alt="avatar"
-        className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover shadow-md"
-      />
-      <AnimatePresence>{explode && <>{particles}</>}</AnimatePresence>
-      <AnimatePresence>
-        {showHello && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: -40 }}
-            exit={{ opacity: 0, y: -60 }}
-            transition={{ duration: 1 }}
-            className="absolute left-1/2 -translate-x-1/2 px-3 py-1 bg-white/80 dark:bg-[#0f0c29]/80 text-xs font-mono text-black dark:text-white rounded-full shadow-lg border border-gray-300 dark:border-white/20"
-          >
-            Hello World!
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
-
-    {/* Nav Links */}
-    <ul
-      className={`flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs sm:text-sm md:text-base font-mono ${
-        isDark ? "text-white" : "text-black"
-      }`}
-    >
-      {"Home AboutMe Skills Projects Certifications".split(" ").map((item) => (
-        <li
-          key={item}
-          className="hover:text-purple-300 transition whitespace-nowrap"
+      <nav className="fixed top-4 md:top-6 w-full z-20 px-4 sm:px-6 md:px-20">
+        <div
+          className={`flex items-center justify-between w-full max-w-7xl mx-auto backdrop-blur-md rounded-full px-4 sm:px-6 py-3 ${
+            isDark
+              ? "bg-gradient-to-r from-[#5ba8ff]/10 to-[#b48bf2]/10"
+              : "bg-gradient-to-r from-[#b48bf2]/20 to-[#5ba8ff]/20"
+          } border border-white/10 dark:border-white/20`}
         >
-          <a href={`#${item.toLowerCase()}`}>{`</${item}>`}</a>
-        </li>
-      ))}
-    </ul>
-  </div>
-</nav>
+          <motion.div onClick={handleAvatarClick} className="relative cursor-pointer ml-[-8px]">
+            <motion.img
+              whileHover={{ scale: 1.2, rotate: 15 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              src="/avatar2.png"
+              alt="avatar"
+              className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover shadow-md"
+            />
+            <AnimatePresence>{explode && <>{particles}</>}</AnimatePresence>
+            <AnimatePresence>
+              {showHello && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: -40 }}
+                  exit={{ opacity: 0, y: -60 }}
+                  transition={{ duration: 1 }}
+                  className="absolute left-1/2 -translate-x-1/2 px-3 py-1 bg-white/80 dark:bg-[#0f0c29]/80 text-xs font-mono text-black dark:text-white rounded-full shadow-lg border border-gray-300 dark:border-white/20"
+                >
+                  Hello World!
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
 
-      {/* Content & Spline */}
-      <div className="flex flex-col lg:flex-row items-center justify-between pt-[90px] sm:pt-[80px] px-4 sm:px-6 md:px-20 gap-10">
+          <ul
+            className={`flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs sm:text-sm md:text-base font-mono ${
+              isDark ? "text-white" : "text-black"
+            }`}
+          >
+            {"Home AboutMe Skills Projects Certifications".split(" ").map((item) => (
+              <li
+                key={item}
+                className="hover:text-purple-300 transition whitespace-nowrap"
+              >
+                <a href={`#${item.toLowerCase()}`}>{`</${item}>`}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      {/* Content & Spline (Aligned with Navbar) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-20 flex flex-col lg:flex-row items-center justify-between pt-[90px] sm:pt-[80px] gap-10">
         {/* Text Block */}
         <div className="flex flex-col justify-center h-full text-left space-y-5 max-w-3xl w-full mt-[-30px] sm:mt-[-40px] lg:mt-[-60px]">
           <TypingText isDark={isDark} />
@@ -235,7 +233,7 @@ export default function Hero() {
             >
               Let’s Talk!
             </a>
-           <div className="relative flex items-center gap-2">
+            <div className="relative flex items-center gap-2">
               <button
                 onClick={() => setShowOptions((prev) => !prev)}
                 className="w-9 h-9 flex items-center justify-center rounded-full hover:rotate-90 transition-transform"
