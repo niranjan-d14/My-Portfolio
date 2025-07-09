@@ -95,7 +95,7 @@ export default function AboutMe() {
               theme === "dark" ? "text-gray-300" : "text-gray-800"
             }`}
           >
-            Hello! I'm <span className="font-semibold text-purple-500">Niranjan Desai</span>, Motivated and curious individual with a foundational understanding of core computer science concepts, and a growing interest in areas like web development, cybersecurity and cloud. Seeking opportunities to apply my skills, collaborate with others, and continue learning in an environment that values innovation, growth, and collective success.
+            Hello! I'm <span className="font-semibold text-purple-500">Niranjan Desai</span>, Motivated and curious individual with a foundational understanding of core computer science concepts, and a growing interest in areas like web development, cybersecurity and cloud technologies. Seeking opportunities to apply my skills, collaborate with others, and continue learning in an environment that values innovation, growth, and collective success.
           </p>
 
           <p className="mt-6 mb-2 text-sm sm:text-base text-gray-400 dark:text-gray-500 italic">
