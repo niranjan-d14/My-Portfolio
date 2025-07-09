@@ -34,7 +34,7 @@ export default function FooterCTA() {
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p className="mb-4 md:mb-0">© 2025 All rights reserved.</p>
           <div className="flex gap-6 text-white text-base">
-            <a href="https://github.com/niranjand14" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-gray-300">
+            <a href="https://github.com/niranjan-d14" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-gray-300">
               <FaGithub /> Github
             </a>
             <a href="https://www.linkedin.com/in/niranjan-desai14/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-gray-300">
